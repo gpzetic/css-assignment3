@@ -5,6 +5,7 @@
 
 * {
     overflow-x: hidden;
+    text-shadow: 5px 5px 5px #1b16162f;
 }
 
 @media (max-width: 800px) {
@@ -15,7 +16,7 @@
         --var: 0;
         color: white;
         font-family: poppins;
-        font-size: 2em;
+        font-size: 1.3em;
         scroll-behavior: smooth;
     }
     .block {
@@ -128,16 +129,36 @@ header {
 
 footer {
     margin-top: -1em;
-    display: inline-flex;
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-footer p {
-    padding-left: 40px;
-}
-
-form {
+footer section {
     display: block;
+}
+
+
+footer h6 {
+    margin:auto;
+    padding: auto;
+}
+
+footer p, footer form {
+    display: block;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    border: 2px solid var(--ter);
+    background-color: var(--sec);
+    border-radius: 15px;
+    color: #195886;
 }
 
 ul li {
@@ -182,8 +203,17 @@ svg {
     /* transition: transform 1s; */
 }
 
+.slideinR {
+    transform: translateX(300px);
+    /* transition: transform 1s; */
+}
+
 .slide {
     animation: 1s forwards 0s 1 slideInFromLeft;
+}
+
+.slideR {
+    animation: 1s forwards 0s 1 slideInFromRight;
 }
 
 .block li {
@@ -208,6 +238,17 @@ section h1 {
 #nutrition > span > span {
     font-size: 1.1em;
     color:#bdeeed;
+}
+
+#nutrition #scroller {
+    max-height: 1.5em;
+    animation: scroller 10s cubic-bezier(.47,.58,1,.67) infinite;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+#nutrition #scrollerText {
+    max-height: 1.5em;
 }
 
 #products menu {
@@ -237,10 +278,20 @@ menu ul li a {
     height: 400px;
     background-size: cover;
     border-radius: 50px;
-    transition: 0.5s;
 }
 
-menu ul li a:hover {
+menu ul li {
+    transition: 0.5s;
+    border-radius: 50px;
+    box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.412);
+}
+
+.itemwrapper {
+    border-radius: 50px;
+    background-color: #0e8f8965;
+}
+
+menu ul li:hover {
     background-size: 110% !important;
     background-position: 50%;
 }
@@ -297,5 +348,25 @@ menu ul li a:hover {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroller {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: -1050px;
     }
 }

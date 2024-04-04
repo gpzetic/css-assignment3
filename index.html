@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Grayson Zetic">
+        <meta name="description" content="My favourite candy">
         <title>Tootsie Rolls</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js" defer></script>
@@ -56,19 +58,23 @@
             <h2 class="slidein">Nutrition</h2>
             <section class="slidein">
                 <h6>100 Calories</h6>
-                <p>Total Fat 0g</p>
-                <p>Saturated Fat 0g</p>                
-                <p>Trans Fat 0g</p>            
-                <p>Cholesterol 0mg</p>
-                <p>Sodium 35mg</p>
-                <p>Total Carbohydrate 23g</p>
-                <p>Dietary Fiber 0g</p>            
-                <p>Total Sugars 16g</p>
-                <p>Protein 1g </p>           
-                <p>Vitamin D 0mcg</p>
-                <p>Calcium 0mg</p>
-                <p>Iron 0mg</p>
-                <p>Potassium 0mg</p>
+                <section id="scroller">
+                    <p id="scrollerText">
+                        Total Fat 0g
+                        Saturated Fat 0g             
+                        Trans Fat 0g       
+                        Cholesterol 0mg
+                        Sodium 35mg
+                        Total Carbohydrate 23g
+                        Dietary Fiber 0g         
+                        Total Sugars 16g
+                        Protein 1g          
+                        Vitamin D 0mcg
+                        Calcium 0mg
+                        Iron 0mg
+                        Potassium 0mg
+                    </p>
+                </section>
             </section>         
             <br>
             <span class="slidein">Juicy Drops are more than just tasty treats - 
@@ -85,23 +91,23 @@
             <h2 class="slidein">Products</h2>
             <menu>
                 <ul>
-                    <li class="slidein">
-                        <a id="item1">
+                    <li class="slidein" id="item1">
+                        <a class="itemwrapper">
 
                         </a>
                     </li>
-                    <li class="slidein">
-                        <a id="item2">
+                    <li class="slideinR" id="item2">
+                        <a class="itemwrapper">
 
                         </a>
                     </li>
-                    <li class="slidein">
-                        <a id="item3">
+                    <li class="slidein" id="item3">
+                        <a class="itemwrapper">
 
                         </a>
                     </li>
-                    <li class="slidein">
-                        <a id="item4">
+                    <li class="slideinR" id="item4">
+                        <a class="itemwrapper">
 
                         </a>
                     </li>
@@ -110,12 +116,29 @@
         </section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 270"><path fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,224C480,203,600,117,720,96C840,75,960,117,1080,154.7C1200,192,1320,224,1380,240L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         <footer>
-            <img src="images/logo.png" alt="Juicy Drops Logo">
-            <p><small>2024 &copy; All rights and lefts reserved</small></p>
-            <br>
-            <form>
-                <textarea></textarea>
-            </form>
+            <section>
+                <img src="images/logo.png" alt="Juicy Drops Logo" class="slidein">
+                <p class="slidein"><small>2024 &copy; All rights and lefts reserved</small></p>    
+            </section>
+            <div>
+                <form>
+                    <h5>Location</h5>
+                    <h6>Address: 443 Security Rd.</h6>
+                    <h6>P.O Box: 404 Nonexistent Ln.</h6>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <h5>Contact Us</h5>
+                    Name:
+                    <input type="text">
+                    Email:
+                    <input type="email">
+                    Feedback:
+                    <textarea></textarea>
+                    <input type="button" value="Submit" onclick="alert('Your feedback has been submitted.')">
+                </form>
+            </div>
         </footer>
     </body>
 </html>
