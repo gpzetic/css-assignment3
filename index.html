@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tootsie Rolls</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="top">
+                <h1>Juicy Drop</h1>
+            </div>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" id="menu">
+                        Menu
+                        <div id="portal">
+                            <div id="menuitems">
+                                <a href="#facts">
+                                    Facts
+                                </a>
+                                <a href="#nutrition">
+                                    Nutrition
+                                </a>
+                                <a href="#products">
+                                    Products
+                                </a>
+                            </div> 
+                        </div>
+                    </label>
+                </li>
+            </ul>       
+        </header>
+        <section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 220">
+                <path fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,208C384,192,480,96,576,96C672,96,768,192,864,229.3C960,267,1056,245,1152,218.7C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+            <section id="masthead" class="block">
+                <section id="facts">
+                    <h2>Juicy Drop Pop Facts</h2>
+                    <ol>
+                        <li class="slidein">1 Juicy Drop is a candy product manufactured by Topps.</li>
+                        <li class="slidein">2 It features a combination of sour gel and sweet candy.</li>
+                        <li class="slidein">3 The candy typically includes a sweet candy stick or lollipop.</li>
+                        <li class="slidein">4 Consumers can customize their level of sourness by dipping the candy into the sour gel container.</li>
+                        <li class="slidein">5 Juicy Drop is popular among both children and adults for its unique flavor combination.</li>
+                    </ol>
+                </section>
+            </section>
+        </section>
+        <br>
+        <section class="block" id="nutrition">
+            <h2 class="slidein">Nutrition</h2>
+            <h6></h6>              
+            <h6>100 Calories</h6>
+            <p>Total Fat 0g</p>
+            <p>Saturated Fat 0g</p>                
+            <p>Trans Fat 0g</p>            
+            <p>Cholesterol 0mg</p>
+            <p>Sodium 35mg</p>
+            <p>Total Carbohydrate 23g</p>
+            <p>Dietary Fiber 0g</p>            
+            <p>Total Sugars 16g</p>
+            <p>Protein 1g </p>           
+            <p>Vitamin D 0mcg</p>
+            <p>Calcium 0mg</p>
+            <p>Iron 0mg</p>
+            <p>Potassium 0mg</p>
+            <br>
+            <span>Juicy Drops are more than just tasty treats - 
+                they're surprisingly nutritious too, boasting a revolutionary 
+                <span>1 gram</span> of protein per serving. 
+                This protein boost can help with <span>muscle 
+                repair and growth</span>, making them a healthier snack choice. 
+                So whether you're enjoying them for their flavor or 
+                their nutritional value, Juicy Drops are a satisfying 
+                and wholesome treat for any occasion.</span>
+        </section>
+        <br>
+        <section class="block" id="products">
+            <h2>Products</h2>
+            <menu>
+                
+            </menu>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 270"><path fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,224C480,203,600,117,720,96C840,75,960,117,1080,154.7C1200,192,1320,224,1380,240L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        <footer>
+            <img src="images/logo.png" alt="Juicy Drops Logo">
+            <p><small>2024 &copy; All rights and lefts reserved</small></p>
+            <br>
+            <form>
+                <textarea></textarea>
+            </form>
+        </footer>
+        <script>
+            const startAnimation = (entries, observer) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("slide", entry.isIntersecting);
+                });
+            };
+
+            const observer = new IntersectionObserver(startAnimation);
+            const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+
+            const elements = document.querySelectorAll('.slidein');
+            elements.forEach(el => {
+                observer.observe(el, options);
+            })
+        </script>
+    </body>
+</html>

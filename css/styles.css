@@ -1,0 +1,244 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins.ttf);
+}
+
+@media (max-width: 800px) {
+    :root {
+        --pri: #35CAC4;
+        --sec: #5DD5D0;
+        --ter: #278b9a;
+        --var: 0;
+        color: white;
+        font-family: poppins;
+        font-size: 2em;
+        scroll-behavior: smooth;
+    }
+    .block {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: var(--pri);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 801px) {
+    :root {
+        --pri: #35CAC4;
+        --sec: #5DD5D0;
+        --ter: #278b9a;
+        --var: 0;
+        color: white;
+        font-family: poppins;
+        font-size: 1.5em;
+        scroll-behavior: smooth;
+    }
+    .block {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 30px;
+        max-width: 900px;
+        background-color: var(--pri);
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+body {
+    background-color: var(--sec);
+    margin: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+#masthead {
+    margin: auto;
+    background-image: url(../images/juicy.jpg);
+    padding: 0;
+}
+
+/* Hide the input checkbox */
+#menu {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    color: #eae7e7;
+}
+
+/* Hide the menu items by default */
+#menu:not(:checked) + #portal #menuitems{
+    display: none;
+}
+
+#portal {
+    perspective: 1000px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#menuitems {
+    display: block;
+    position: relative;
+}
+
+#menuitems a:first-letter {
+    color: #e0f1ea;
+    font-size: 1.3em;
+}
+
+#menuitems:nth-child(1) {
+    animation: 0.5s menu forwards;
+}
+
+#menuitems a {
+    margin-left: 20vw;
+}
+
+#facts {
+    background-color: #16726dd6;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+#top {
+    margin: auto;
+    text-align: center;
+}
+
+header, footer {
+    padding: 50px;
+    background-color: var(--pri);
+}
+
+header {
+    background:linear-gradient(to bottom, var(--ter), var(--pri));
+}
+
+footer {
+    margin-top: -1em;
+    display: inline-flex;
+    width: 100%;
+}
+
+footer p {
+    padding-left: 40px;
+}
+
+form {
+    display: block;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ol li {
+    list-style-type: none;
+}
+
+ol li:first-letter {
+    font-size: 1.3em;
+    color:#bdeeed;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+svg {
+    fill: var(--pri);
+    animation: drop 5s infinite ease-in-out;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.fadein {
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+.slidein {
+    transform: translateX(-300px);
+    /* transition: transform 1s; */
+}
+
+.slide {
+    animation: 1s forwards 0s 1 slideInFromLeft;
+}
+
+.block li {
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+
+}
+
+section h1 {
+    text-align: center;
+}
+
+#nutrition p {
+    margin: 5px;
+    font-size: 0.5em;
+    display: inline;
+}
+
+#nutrition > span {
+    font-size: 0.9em;
+}
+
+#nutrition > span > span {
+    font-size: 1.1em;
+    color:#bdeeed;
+}
+
+menu {
+    display: flex;
+}
+
+@keyframes drop {
+    0% {
+        transform: scaleX(100%) translateX(0%);
+    }
+    50% {
+        transform: scaleX(150%) translateX(0%);
+    }
+    100% {
+        transform: scaleX(100%) translateX(0%);
+    }
+}
+@keyframes menu {
+    0% {
+        left: -1000px;
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scaleX(1);
+        left: 0px;
+        
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
