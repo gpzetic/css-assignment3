@@ -3,6 +3,10 @@
     src: url(../fonts/Poppins.ttf);
 }
 
+* {
+    overflow-x: hidden;
+}
+
 @media (max-width: 800px) {
     :root {
         --pri: #35CAC4;
@@ -18,8 +22,9 @@
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
+        padding: 30px;
         background-color: var(--pri);
-        border-radius: 5px;
+        border-radius: 50px;
         overflow: hidden;
     }
 }
@@ -205,8 +210,59 @@ section h1 {
     color:#bdeeed;
 }
 
+#products menu {
+    padding: 0px;
+}
+
 menu {
     display: flex;
+}
+
+menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+menu ul > li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+menu ul li a {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+menu ul li a:hover {
+    background-size: 110% !important;
+    background-position: 50%;
+}
+
+#item1 {
+    background-image: url(../images/gummies.webp);
+    background-size: 100%;
+}
+
+#item2 {
+    background-image: url(../images/gum.webp);
+    background-size: 120%;
+}
+
+#item3 {
+    background-image: url(../images/stix.webp);
+    background-size: 100%;
+}
+
+#item4 {
+    background-image: url(../images/pop.jpg);
+    background-size: 170%;
 }
 
 @keyframes drop {
@@ -220,6 +276,7 @@ menu {
         transform: scaleX(100%) translateX(0%);
     }
 }
+
 @keyframes menu {
     0% {
         left: -1000px;

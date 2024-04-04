@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tootsie Rolls</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js" defer></script>
@@ -53,23 +54,24 @@
         <br>
         <section class="block" id="nutrition">
             <h2 class="slidein">Nutrition</h2>
-            <h6></h6>              
-            <h6>100 Calories</h6>
-            <p>Total Fat 0g</p>
-            <p>Saturated Fat 0g</p>                
-            <p>Trans Fat 0g</p>            
-            <p>Cholesterol 0mg</p>
-            <p>Sodium 35mg</p>
-            <p>Total Carbohydrate 23g</p>
-            <p>Dietary Fiber 0g</p>            
-            <p>Total Sugars 16g</p>
-            <p>Protein 1g </p>           
-            <p>Vitamin D 0mcg</p>
-            <p>Calcium 0mg</p>
-            <p>Iron 0mg</p>
-            <p>Potassium 0mg</p>
+            <section class="slidein">
+                <h6>100 Calories</h6>
+                <p>Total Fat 0g</p>
+                <p>Saturated Fat 0g</p>                
+                <p>Trans Fat 0g</p>            
+                <p>Cholesterol 0mg</p>
+                <p>Sodium 35mg</p>
+                <p>Total Carbohydrate 23g</p>
+                <p>Dietary Fiber 0g</p>            
+                <p>Total Sugars 16g</p>
+                <p>Protein 1g </p>           
+                <p>Vitamin D 0mcg</p>
+                <p>Calcium 0mg</p>
+                <p>Iron 0mg</p>
+                <p>Potassium 0mg</p>
+            </section>         
             <br>
-            <span>Juicy Drops are more than just tasty treats - 
+            <span class="slidein">Juicy Drops are more than just tasty treats - 
                 they're surprisingly nutritious too, boasting a revolutionary 
                 <span>1 gram</span> of protein per serving. 
                 This protein boost can help with <span>muscle 
@@ -80,9 +82,30 @@
         </section>
         <br>
         <section class="block" id="products">
-            <h2>Products</h2>
+            <h2 class="slidein">Products</h2>
             <menu>
-                
+                <ul>
+                    <li class="slidein">
+                        <a id="item1">
+
+                        </a>
+                    </li>
+                    <li class="slidein">
+                        <a id="item2">
+
+                        </a>
+                    </li>
+                    <li class="slidein">
+                        <a id="item3">
+
+                        </a>
+                    </li>
+                    <li class="slidein">
+                        <a id="item4">
+
+                        </a>
+                    </li>
+                </ul>
             </menu>
         </section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 270"><path fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,224C480,203,600,117,720,96C840,75,960,117,1080,154.7C1200,192,1320,224,1380,240L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
@@ -94,20 +117,5 @@
                 <textarea></textarea>
             </form>
         </footer>
-        <script>
-            const startAnimation = (entries, observer) => {
-                entries.forEach(entry => {
-                    entry.target.classList.toggle("slide", entry.isIntersecting);
-                });
-            };
-
-            const observer = new IntersectionObserver(startAnimation);
-            const options = { root: null, rootMargin: '0px', threshold: 1 }; 
-
-            const elements = document.querySelectorAll('.slidein');
-            elements.forEach(el => {
-                observer.observe(el, options);
-            })
-        </script>
     </body>
 </html>
