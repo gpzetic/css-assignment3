@@ -165,7 +165,6 @@ footer section {
 
 footer h6 {
     margin:auto;
-    padding: auto;
 }
 
 footer p, footer form {
@@ -341,13 +340,13 @@ menu ul li:hover {
 
 @keyframes drop {
     0% {
-        transform: scaleX(100%) translateX(0%);
+        transform: scaleX(1);
     }
     50% {
-        transform: scaleX(150%) translateX(0%);
+        transform: scaleX(1.5);
     }
     100% {
-        transform: scaleX(100%) translateX(0%);
+        transform: scaleX(1);
     }
 }
 
