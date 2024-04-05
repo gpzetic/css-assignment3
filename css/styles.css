@@ -53,6 +53,29 @@
     }
 }
 
+@media (min-width: 2000px) {
+    :root {
+        --pri: #35CAC4;
+        --sec: #5DD5D0;
+        --ter: #278b9a;
+        --var: 0;
+        color: white;
+        font-family: poppins;
+        font-size: 3.5em;
+        scroll-behavior: smooth;
+    }
+    .block {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 30px;
+        max-width: 1900px;
+        background-color: var(--pri);
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
 body {
     background-color: var(--sec);
     margin: 0;
