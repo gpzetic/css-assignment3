@@ -210,9 +210,6 @@ svg {
 
 .fadein {
     opacity: 0;
-    -moz-transition: opacity 1.5s;
-    -webkit-transition: opacity 1.5s;
-    -o-transition: opacity 1.5s;
     transition: opacity 1.5s;
 }
 
@@ -236,11 +233,6 @@ svg {
 
 .slideR {
     animation: 1s forwards 0s 1 slideInFromRight;
-}
-
-.block li {
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-
 }
 
 section h1 {
