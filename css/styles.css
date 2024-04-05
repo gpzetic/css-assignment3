@@ -265,15 +265,15 @@ section h1 {
     max-height: 1.5em;
 }
 
-#products menu {
+#products div {
     padding: 0px;
 }
 
-menu {
+#items {
     display: flex;
 }
 
-menu ul {
+#items ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -281,20 +281,20 @@ menu ul {
     flex-direction: row;
 }
 
-menu ul > li {
+#items ul > li {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-menu ul li a {
+#items ul li a {
     width: 400px;
     height: 400px;
     background-size: cover;
     border-radius: 50px;
 }
 
-menu ul li {
+#items ul li {
     transition: 0.5s;
     border-radius: 50px;
     box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.412);
@@ -305,7 +305,7 @@ menu ul li {
     background-color: #0e8f8965;
 }
 
-menu ul li:hover {
+#items ul li:hover {
     background-size: 110% !important;
     background-position: 50%;
 }
